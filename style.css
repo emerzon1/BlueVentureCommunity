@@ -1,0 +1,263 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'EB Garamond', serif;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 6rem;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.nav-links a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0055ff;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.join-btn {
+    background-color: #00539b;
+    color: white !important;
+}
+
+.join-btn:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 60vh;
+    background-image: linear-gradient(#0000000c, #00000087), url("images/HeroBackground.jpg");
+    background-position: 0 0, 50% 45%;
+    background-repeat: repeat, repeat;
+    background-size: auto, auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+    span {
+        font-size: 5rem;
+        display: block;
+    }
+}
+
+.learn-btn {
+    background-color: #00539b;
+    color: white;
+    padding: .75rem 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 1.25rem;
+}
+
+.learn-btn:hover {
+    background-color: #333;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Smooth scrolling target spacing */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+/* Section base */
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Mission */
+.mission {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+/* About Sections */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+/* 2-column layout on larger screens */
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  .about-text,
+  .about-images,
+  .about-image {
+    flex: 1;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* How to Participate */
+.participate p {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+.participate-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.card {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 30px 20px;
+}
+
+.card h3 {
+  color: #0055ff;
+  margin-bottom: 0.75rem;
+}
+
+/* 3 columns on larger screens */
+@media (min-width: 768px) {
+  .participate-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Typography tweak for buttons in body */
+.section .btn {
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #0055ff;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 10px auto 0;
+  line-height: 1.4;
+}
